@@ -10,7 +10,7 @@ class PieceResevoir extends Component {
 
     return (
       <div className="PieceResevoir">
-        <div>Extra Pieces</div>
+        <h2>Extra Pieces</h2>
         <Droppable droppableId="resevoir" direction="horizontal">
           {provided => (
             <div
