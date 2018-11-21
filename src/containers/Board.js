@@ -45,6 +45,71 @@ class Board extends Component {
             "transform": "rotate(-90deg)"
           }}/>
 
+        <img src={require("../arrow-0.jpg")}
+          style={{
+            "width": "30px",
+            "position": "absolute",
+            "left": "210px",
+            "top": "295px",
+            "transform": "rotate(0deg)"
+          }} />
+        <img src={require("../arrow-0.jpg")}
+          style={{
+            "width": "30px",
+            "position": "absolute",
+            "left": "215px",
+            "top": "235px",
+            "transform": "rotate(45deg)"
+          }} />
+        <img src={require("../arrow-0.jpg")}
+          style={{
+            "width": "30px",
+            "position": "absolute",
+            "left": "215px",
+            "top": "360px",
+            "transform": "rotate(-45deg)"
+          }} />
+        <img src={require("../arrow-0.jpg")}
+          style={{
+            "width": "30px",
+            "position": "absolute",
+            "left": "350px",
+            "top": "295px",
+            "transform": "rotate(180deg)"
+          }} />
+        <img src={require("../arrow-0.jpg")}
+          style={{
+            "width": "30px",
+            "position": "absolute",
+            "left": "345px",
+            "top": "360px",
+            "transform": "rotate(225deg)"
+          }} />
+        <img src={require("../arrow-0.jpg")}
+          style={{
+            "width": "30px",
+            "position": "absolute",
+            "left": "345px",
+            "top": "235px",
+            "transform": "rotate(135deg)"
+          }} />
+        <img src={require("../arrow-0.jpg")}
+          style={{
+            "width": "60px",
+            "position": "absolute",
+            "left": "265px",
+            "top": "365px",
+            "transform": "rotate(-90deg)"
+          }} />
+        <img src={require("../arrow-0.jpg")}
+          style={{
+            "width": "60px",
+            "position": "absolute",
+            "left": "265px",
+            "top": "195px",
+            "transform": "rotate(-90deg)"
+          }} />
+
         <Space index={0}
           space={state.spaces['space-1']}
           style={{...style, "top": "90px", "left": "245px"}}
