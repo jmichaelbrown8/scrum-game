@@ -11,7 +11,7 @@ class App extends Component {
 
   onDragEnd = result => {
     const { destination, source, draggableId } = result;
-    console.log(destination, source, draggableId);
+    
     if (!destination) {
       return;
     }
@@ -25,6 +25,7 @@ class App extends Component {
 
     const start = this.state.spaces[source.droppableId];
     const finish = this.state.spaces[destination.droppableId];
+    const resevoir = this.state.spaces.resevoir;
 
     // moving in same space
     if (start === finish) {
@@ -50,11 +51,73 @@ class App extends Component {
     }
 
     // moving between spaces
-    const newStartPieceIds = Array.from(start.pieceIds);
-    const newFinishPieceIds = Array.from(finish.pieceIds);
+    if (finish.id === 'resevoir' || finish.pieceIds.length === 0) {
+      const newStartPieceIds = Array.from(start.pieceIds);
+      const newFinishPieceIds = Array.from(finish.pieceIds);
 
-    newStartPieceIds.splice(source.index, 1);
-    newFinishPieceIds.splice(destination.index, 0, draggableId);
+      newStartPieceIds.splice(source.index, 1);
+
+      newFinishPieceIds.splice(destination.index, 0, draggableId);
+
+      const newStartSpace = {
+        ...start,
+        pieceIds: newStartPieceIds
+      }
+
+      const newFinishSpace = {
+        ...finish,
+        pieceIds: newFinishPieceIds
+      }
+
+      const newState = {
+        ...this.state,
+        spaces: {
+          ...this.state.spaces,
+          [newStartSpace.id]: newStartSpace,
+          [newFinishSpace.id]: newFinishSpace,
+        }
+      }
+
+      this.setState(newState);
+      return;
+    }
+
+    // moving to a space with a piece already there (from the resevoir)
+    if (start.id === 'resevoir') {
+      const newResevoirPieceIds = Array.from(resevoir.pieceIds);
+      const newFinishPieceIds = Array.from([draggableId]);
+
+      const displacedId = this.state.spaces[destination.droppableId].pieceIds[0];
+      newResevoirPieceIds.splice(source.index, 1, displacedId);
+
+      const newResevoirSpace = {
+        ...resevoir,
+        pieceIds: newResevoirPieceIds
+      }
+
+      const newFinishSpace = {
+        ...finish,
+        pieceIds: newFinishPieceIds
+      }
+
+      const newState = {
+        ...this.state,
+        spaces: {
+          ...this.state.spaces,
+          [newResevoirSpace.id]: newResevoirSpace,
+          [newFinishSpace.id]: newFinishSpace,
+        }
+      }
+
+      this.setState(newState);
+
+
+      return;
+    }
+
+    // moving to space with a piece already there (swap the pieces)
+    const newStartPieceIds = Array.from(finish.pieceIds);
+    const newFinishPieceIds = Array.from(start.pieceIds);
 
     const newStartSpace = {
       ...start,
@@ -76,6 +139,10 @@ class App extends Component {
     }
 
     this.setState(newState);
+
+
+
+
 
 
   }

@@ -67,19 +67,19 @@ class Board extends Component {
           state={state} />
         <Space index={5}
           space={state.spaces['space-6']}
-          style={{...style, "top": "50px", "left": "40px", "border-radius": "100%"}}
+          style={{...style, "top": "50px", "left": "40px", "borderRadius": "100%"}}
           state={state} />
         <Space index={6}
           space={state.spaces['space-7']}
-          style={{...style, "top": "50px", "right": "40px", "border-radius": "100%"}}
+          style={{...style, "top": "50px", "right": "40px", "borderRadius": "100%"}}
           state={state} />
         <Space index={7}
           space={state.spaces['space-8']}
-          style={{...style, "bottom": "40px", "right": "40px", "border-radius": "100%"}}
+          style={{...style, "bottom": "40px", "right": "40px", "borderRadius": "100%"}}
           state={state} />
         <Space index={8}
           space={state.spaces['space-9']}
-          style={{...style, "bottom": "40px", "left": "40px", "border-radius": "100%"}}
+          style={{...style, "bottom": "40px", "left": "40px", "borderRadius": "100%"}}
           state={state} />
 
       </div>
