@@ -109,6 +109,13 @@ class Board extends Component {
             "top": "195px",
             "transform": "rotate(-90deg)"
           }} />
+        <img src={require("../arrow-180.jpg")}
+          style={{
+            "width": "70px",
+            "position": "absolute",
+            "left": "522px",
+            "top": "275px"
+          }}/>
 
         <Space index={0}
           space={state.spaces['space-1']}
