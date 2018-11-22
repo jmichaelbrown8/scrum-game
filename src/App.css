@@ -1,9 +1,9 @@
 h1, h2 {
   margin: 0;
+  text-align: center;
 }
 
 .App {
-  text-align: center;
 }
 
 .Board {
@@ -14,6 +14,17 @@ h1, h2 {
   height: 600px;
   box-sizing: border-box;
   position: relative;
+  display: inline-block;
+}
+
+.Legend {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
 }
 
 .Space {
@@ -32,6 +43,8 @@ h1, h2 {
   background-color: white;
   box-sizing: border-box;
   z-index: 10;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .PieceResevoir {

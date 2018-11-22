@@ -12,7 +12,7 @@ class Board extends Component {
 
     return (
       <div className="Board">
-        <h1>{title}</h1>
+        <h1>Scrum Game</h1>
         <img src={require("../arrow-90.jpg")}
           style={{
             "width": "150px",

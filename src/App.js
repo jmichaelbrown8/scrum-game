@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Board from './containers/Board';
+import Legend from './components/Legend';
 import PieceResevoir from './containers/PieceResevoir';
 import { DragDropContext } from 'react-beautiful-dnd';
 import initialData from './initial-data';
@@ -11,7 +12,7 @@ class App extends Component {
 
   onDragEnd = result => {
     const { destination, source, draggableId } = result;
-    
+
     if (!destination) {
       return;
     }
@@ -151,7 +152,8 @@ class App extends Component {
     return (
       <div className="App">
         <DragDropContext onDragEnd={this.onDragEnd}>
-          <Board title="Scrum Game" state={this.state} />
+          <Board state={this.state} />
+          <Legend />
           <PieceResevoir state={this.state} />
         </DragDropContext>
       </div>
