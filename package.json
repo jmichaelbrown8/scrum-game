@@ -2,6 +2,7 @@
   "name": "scrum-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://s3.amazonaws.com/nike-commerce-test-app-internal/applications/agile/scrum-board",
   "dependencies": {
     "react": "^16.6.3",
     "react-beautiful-dnd": "^10.0.1",
