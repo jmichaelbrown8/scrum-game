@@ -9,14 +9,14 @@ class Piece extends Component {
 
     return (
       <Draggable draggableId={piece.id} index={index} >
-        {(provided) => (
+        {(provided, snapshot) => (
           <div className="Piece"
               {...provided.draggableProps}
               {...provided.dragHandleProps}
               ref={provided.innerRef}
           >
             <Shape id={piece.id}></Shape>
-            <div>{piece.content}</div>
+            <div id={piece.id + '-text'}>{piece.content}</div>
           </div>
         )}
       </Draggable>

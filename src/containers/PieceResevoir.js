@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import Space from '../components/Space';
 import Piece from '../components/Piece';
 import {Droppable} from 'react-beautiful-dnd';
 
 class PieceResevoir extends Component {
   render() {
-    var title = this.props.title;
     var state = this.props.state;
 
     return (
@@ -22,6 +20,7 @@ class PieceResevoir extends Component {
                 var piece = state.pieces[pieceId];
                 return <Piece piece={piece} index={index} key={pieceId} />
               })}
+              {provided.placeholder}
             </div>
           )}
         </Droppable>

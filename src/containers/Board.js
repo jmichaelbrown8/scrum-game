@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import Space from '../components/Space';
-import Piece from '../components/Piece';
 
 class Board extends Component {
   render() {
-    var title = this.props.title;
     var state = this.props.state;
     var style = {
       "position": "absolute"
