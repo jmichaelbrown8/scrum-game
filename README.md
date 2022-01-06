@@ -4,7 +4,7 @@ This is a simple puzzle to test your knowledge of the Scrum framework.
 
 ## Technologies / Libraries
 * React
-* React DnD
+* [React Beautiful DnD](https://github.com/atlassian/react-beautiful-dnd)
 
 ## Deployment
 
