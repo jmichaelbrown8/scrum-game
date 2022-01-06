@@ -1,6 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🧩 scrum-game
 
-## Available Scripts
+This is a simple puzzle to test your knowledge of the Scrum framework.
+
+## Technologies / Libraries
+* React
+* React DnD
+
+## Deployment
+
+This site is deployed to [agility.help/scrumgame](https://agility.help/scrumgame)
+
+<img src="./scrum-game.png" alt="Scrum Game Screenshot" style="width: 100%; max-width: 600px;">
+
+## About
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
